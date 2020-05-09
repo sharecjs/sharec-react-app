@@ -14,7 +14,7 @@
   },
   "homepage": "https://github.com/lamartire/sharec-react-app#readme",
   "dependencies": {
-    "sharec": "^2.1.0"
+    "sharec": "^2.1.1"
   },
   "devDependencies": {},
   "scripts": {
