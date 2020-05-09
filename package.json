@@ -1,0 +1,23 @@
+{
+  "name": "sharec-react-app",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lamartire/sharec-react-app.git"
+  },
+  "keywords": [],
+  "author": "lamartire <lamartire@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lamartire/sharec-react-app/issues"
+  },
+  "homepage": "https://github.com/lamartire/sharec-react-app#readme",
+  "dependencies": {
+    "sharec": "^2.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "postinstall": "sharec"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "plugin:react/recommended"
+  ],
+  "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "semi": ["error", "never"]
+  }
+}
