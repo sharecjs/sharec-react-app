@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+*,
+input,
+textarea,
+select {
+  font-family: monospace;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(214deg, #a700b0, #6360ff);
+  background-size: 400% 400%;
+  animation: bg 19s ease infinite;
+}
+
+.app {
+  max-width: 480px;
+  margin: 10em auto;
+  text-align: center;
+  color: #fff;
+}
+
+.app__title {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.app__description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.app__description a {
+  color: #fff;
+}
+
+@keyframes bg {
+  0% {
+    background-position: 17% 0%;
+  }
+
+  50% {
+    background-position: 84% 100%;
+  }
+
+  100% {
+    background-position: 17% 0%;
+  }
+}
