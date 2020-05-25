@@ -6,12 +6,14 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
 
-  plugins: [new HtmlWebpackPlugin({
-    template: path.join(__dirname, 'static/index.html')
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'static/index.html'),
+    }),
+  ],
 
   module: {
     rules: [
@@ -19,7 +21,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: 'babel-loader',
-      }
-    ]
-  }
+      },
+    ],
+  },
 }
