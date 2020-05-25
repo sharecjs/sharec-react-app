@@ -13,7 +13,7 @@ body {
   margin: 0;
   background: linear-gradient(214deg, #a700b0, #6360ff);
   background-size: 400% 400%;
-  animation: bg 19s ease infinite;
+  animation: bg 10s ease infinite;
 }
 
 .app {

@@ -1,4 +1,5 @@
 const path = require('path')
+const { HotModuleReplacementPlugin } = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniExtractPlugin = require('mini-css-extract-plugin')
 
@@ -6,7 +7,7 @@ module.exports = (env, options) => {
   const PRODUCTION = options.mode === 'production'
 
   return {
-    entry: path.join(__dirname, 'src/main.jsx'),
+    entry: ['react-hot-loader/patch', path.join(__dirname, 'src/main.jsx')],
 
     output: {
       path: path.join(__dirname, 'dist'),
@@ -14,6 +15,7 @@ module.exports = (env, options) => {
     },
 
     plugins: [
+      new HotModuleReplacementPlugin(),
       new HtmlWebpackPlugin({
         template: path.join(__dirname, 'static/index.html'),
       }),
@@ -22,6 +24,13 @@ module.exports = (env, options) => {
         allChunks: true,
       }),
     ],
+
+    resolve: {
+      modules: ['node_modules', './src'],
+      alias: {
+        'react-dom': '@hot-loader/react-dom',
+      },
+    },
 
     module: {
       rules: [
@@ -61,6 +70,11 @@ module.exports = (env, options) => {
           },
         },
       ],
+    },
+
+    devServer: {
+      hot: true,
+      historyApiFallback: true,
     },
   }
 }
